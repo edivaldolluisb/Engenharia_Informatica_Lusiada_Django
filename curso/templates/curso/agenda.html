@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estaticos/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'estaticos/menu/menu.css'%}">
+    <link rel="stylesheet" href="{% static 'estaticos/css/agenda.css'%}">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+
+    <title>Engenharia Informática</title>
+</head>
+
+<body>
+    <!--start of mn-->
+    <nav>
+        <div class="logo">
+            <h1>Eng. Informática</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'calendario' %}">Calendário</a></li>
+            <li><a href="{% url 'agenda' %}">Agenda</a></li>
+            <li><a href="{% url 'anos' %}">Cadeiras</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+
+    <!--end of menu-->
+
+        <div class="eventos">
+        <section>
+            <div class="teste">
+                <h2>E.Informática</h2>
+                <h3>Dias de teste</h3>
+                {% for teste in testes %}
+                    <p class="btn_anos">{{teste.sala}}/ {{teste.disciplina}} --- {{teste.data}}</p>
+                {% endfor %}
+            </div>
+            <div class="teste ">
+                <h3>Entregas de trabalho</h3>
+                {% for entrega in entregas %}
+                    <p class="btn_anos">{{entrega.sala}}/ {{entrega.disciplina}} --- {{entrega.data}}</p>
+                {% endfor %}
+
+            </div>
+        </section>
+    </div>
+
+
+    <script src="{% static 'estaticos/menu/menu.js'%}"></script>
+</body>
+
+</html>

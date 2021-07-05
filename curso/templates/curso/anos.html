@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estaticos/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'estaticos/menu/menu.css'%}">
+
+    <link rel="stylesheet" href="{% static 'estaticos/css/anos.css'%}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+
+    <title>Engenharia Informática</title>
+</head>
+
+<body>
+    <!--start of mn-->
+    <nav>
+        <div class="logo">
+            <h4>Eng. Informática</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'calendario' %}">Calendário</a></li>
+            <li><a href="{% url 'agenda' %}">Agenda</a></li>
+            <li><a href="{% url 'anos' %}">Cadeiras</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+
+    <!--end of mn-->
+
+    <div class="todos_anos">
+        <div class="anos">
+
+            <h1>Todas as disciplinas</h1>
+            {% for disciplina in disciplinas %}
+
+            <a href="{% url 'ver_disciplina' disciplina.id %}">
+                <p class="btn_anos">{{ disciplina.nome }}</p>
+            </a>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="{% static 'estaticos/menu/menu.js'%}"></script>
+</body>
+
+</html>

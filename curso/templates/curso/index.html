@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estaticos/menu/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'estaticos/css/main.css' %} ">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+
+    <!--PWA files-->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="withe">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="canonical" href="https://edivaldolluisb.github.io/ei_lusiadas/">
+    <!--PWA files-->
+
+    <title>Engenharia Informática</title>
+</head>
+
+<body>
+
+    <!--start of mn-->
+    <nav>
+        <div class="logo">
+            <h4>Eng. Informática</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'calendario' %}">Calendário</a></li>
+            <li><a href="{% url 'agenda' %}">Agenda</a></li>
+            <li><a href="{% url 'anos' %}">Cadeiras</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+
+    <!--end of mn-->
+    <main>
+        <section>
+            <iframe class="mapa" id="aside"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.992067050971!2d6.7386626!3d0.3401343!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf57bd79c6393a5f2!2sUniversidade%20Lus%C3%ADada%20de%20S%C3%A3o%20Tom%C3%A9%20e%20Pr%C3%ADncipe!5e0!3m2!1spt-PT!2sst!4v1609436563301!5m2!1spt-PT!2sst"
+                width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </section>
+        <section id="informacao">
+            <div class="info">
+                <h4>Univesidade Lusíadas</h4>
+
+                <img src="{% static 'estaticos/imagens/foto1index.jpg'%}" alt="">
+
+                <div class="desk">
+                    <p>
+                        A formação nas áreas tecnológicas é essencial para o desenvolvimento do nosso país e mais
+                        especificamente das suas indústrias, sejam elas de manufactura ou de serviços. A carência de
+                        técnicos qualificados:
+
+                        <li> Conduz à impossibilidade de atrair novas empresas estrangeiras, nomeadamente
+                            multinacionais;
+                        </li>
+                        <li> Dificulta o desenvolvimento das empresas já implementadas entre nós;</li>
+                        <li> Leva a considerar a deslocação para o estrangeiro das empresas presentemente sedeadas no
+                            nosso país.</li>
+                    </p>
+
+                    <p>
+                        Devem, por isso, ser criados cursos em áreas tecnológicas em franco desenvolvimento que
+                        respondam às
+                        necessidades reais do mercado e à evolução do tecido empresarial.
+
+                        Nesta perspectiva os jovens licenciados terão um índice elevado de empregabilidade, sendo também
+                        previsível uma grande procura destes cursos por parte dos candidatos ao ensino superior.
+
+                        A licenciatura em Engenharia Informática permite a aquisição de diversificados conhecimentos que
+                        permitirão obter competências para poder compreender, projectar e orientar projectos nesta área
+                        do
+                        conhecimento. Com o conteúdo programático das diferentes unidades curriculares e as metodologias
+                        de
+                        ensino, nomeadamente a aquisição de conhecimentos com base na aprendizagem, o licenciado nesta
+                        área
+                        estará apto a ingressar no meio profissional.
+                    </p>
+                    <h3 id="spro_section">Saídas profissionais</h3>
+                    <p>O plano de estudos da licenciatura em Engenharia Informática permite a formação de técnicos
+                        versáteis, capazes de se enquadrar num vasto leque de perfis profissionais, públicos e privados,
+                        entre os quais:</p>
+
+                    <ul>
+                        <li>Administradores de bases de dados;</li>
+                        <li>Analistas de sistemas;</li>
+                        <li>Auditores de informática;</li>
+                        <li>Consultores de informática;</li>
+                        <span id="dots">...</span>
+                        <span id="Spmore">
+                            <li>Desenvolvimento de aplicações / sistemas;</li>
+                            <li>Direcção técnica de sistemas informáticos;</li>
+                            <li>Direcção técnica de projectos informáticos;</li>
+                            <li>Ensino e investigação;</li>
+                            <li>Gestores de serviços de informática;</li>
+                            <li>Gestores de redes informáticas;</li>
+                            <li>Gestores de sistemas informáticos;</li>
+                            <li>Modelador de dados em sistemas informáticos;</li>
+                            <li>Programadores;</li>
+                            <li>Supervisores de redes informáticas;</li>
+                            <li>Técnicos de gestão de redes;</li>
+                            <li>Técnicos informáticos;</li>
+                            <li>Técnicos de manutenção de redes;</li>
+                            <li>Outras actividades profissionais onde a informática seja utilizada como instrumento de
+                                trabalho.</li>
+                        </span>
+                        <button onclick="myFunction()" id="rmSp">Read more</button>
+                        <!--encurtei rmSp como: saidas profissionais-->
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+        <div>
+            <!--localização-->
+            <div class="cinfo">
+                <a href="https://goo.gl/maps/tM5tLFd7D15zRBoS9">
+                    <img src="{% static 'estaticos/icons/icons8-location-64.png'%}" alt="" width="35px">
+                </a>
+                <p>R. da Caixa 188, São Tomé</p>
+            </div>
+            <!--tell-->
+            <div class="cinfo">
+                <a href="tel:+2392225209">
+                    <img src="{% static 'estaticos/icons/icons8-phone-bubble-64.png'%}" alt="" width="35px">
+                </a>
+                <p>222 5209</p>
+            </div>
+            <!--email-->
+            <div class="cinfo">
+                <a href="mailto:liberatomoniz@hotmail.com">
+                    <img src="{% static 'estaticos/icons/icons8-email-48.png'%}" alt="" width="35px">
+                </a>
+                <p>liberatomoniz@hotmail.com</p>
+            </div>
+            <!--facebook-->
+            <div class="cinfo">
+                <a href="https://www.facebook.com/ulstp/?rf=257320107722040" target="_blank">
+                    <img src="{% static 'estaticos/icons/icons-facebook.png'%}" alt="" width="35px">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!--importing js files-->
+
+    <script src="{% static 'estaticos/js/saidaspro-redmore.js'%}"></script>
+    <script src="{% static 'estaticos/menu/menu.js'%}"></script>
+
+</body>
+
+</html>

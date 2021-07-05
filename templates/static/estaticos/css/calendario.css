@@ -1,0 +1,50 @@
+.calendario-escolar{
+    width: 95%;
+    display: flexbox;
+    margin: 2%;
+}
+
+
+#baixar_calendario_calendario button{
+    display: block;
+    padding: 3%;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA; 
+    text-decoration: none;
+}
+
+#baixar_calendario_calendario button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+
+.baixar_calendario{
+    position: relative;
+    padding: 5%;
+}
+  
+@media screen and (min-width: 800px){
+    .calendario-escolar{
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;   
+        
+    }
+    #baixar_calendario_calendario button{
+        display: block;
+        text-decoration: none;
+
+    }
+
+}
+
+.baixar_calendario a{
+    text-decoration: none;
+}
